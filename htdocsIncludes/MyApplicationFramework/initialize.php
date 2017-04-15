@@ -9,7 +9,7 @@
 	/*																										*/
 	/* **************************************************************************************************	*/
 session_start();
-	
+
 /* ************************************************************************* */
 /* DEFINED																	 */
 /*																			 */
@@ -23,7 +23,7 @@ session_start();
 /*																			 */
 /* ************************************************************************* */
 
-// Create the file system directory separator as a short variable so this 
+// Create the file system directory separator as a short variable so this
 // application can be on either Windows or Unix hosting.
 defined('DS')	? null : define('DS', DIRECTORY_SEPARATOR);
 
@@ -48,18 +48,16 @@ defined('WEB_ROOT')	? null : define('WEB_ROOT', '/MyApplicationFramework/');
 /*																			 */
 /* ************************************************************************* */
 require_once(DOC_ROOT.'functions.php');
+
+// get all of the models
 require_once(DOC_ROOT.'model'.DS.'Database.class.php');
 require_once(DOC_ROOT.'model'.DS.'User.class.php');
 require_once(DOC_ROOT.'model'.DS.'UserDB.class.php');
 
+// get the route class
 require_once(DOC_ROOT.'Route.class.php');
 
+// get all of the controllers
 require_once(DOC_ROOT.'controller'.DS.'Home.controller.php');
 require_once(DOC_ROOT.'controller'.DS.'Shopping.controller.php');
 require_once(DOC_ROOT.'controller'.DS.'SessionManagement.controller.php');
-
-
-
-
-
-
